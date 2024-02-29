@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title> Four Counter Game </title>
+    <script>
+        function goToMain() {
+            var player1 = document.getElementById('player1').value;
+            var player2 = document.getElementById('player2').value;
+
+            window.location.href = "main.html?player1=" + encodeURIComponent(player1) + "&player2=" + encodeURIComponent(player2);
+        }
+    </script>
+</head>
+<body>
+    <h1> 4counter 게임을 시작합니다 </h1>
+    <hr>
+    <h3> 플레이어의 이름을 정해주세요 </h3>
+    <p>
+        <label for="player1"> 플레이어 1의 이름은? </label>
+        <input type = "text" id="player1">
+    </p>
+    <p>
+        <label for="player2"> 플레이어 2의 이름은? </label>
+        <input type = "text" id="player2">
+    </p>
+    <a>
+        게임을 시작합니다
+        <button onclick="goToMain()"> 시작~~ </button>
+    </a>
+</body>
